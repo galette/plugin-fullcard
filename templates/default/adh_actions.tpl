@@ -1,0 +1,1 @@
+            <a href="{$galette_base_path}{$fullcard_dir}fullcard.php?id_adh={$member->id}"><img src="{$fullcard_tpl_dir}images/icon-fullcard.png" alt="{_T string="Fiche adhérent"}" width="18" height="13" title="{php}$member = $this->get_template_vars('member'); echo preg_replace('/%membername/', $member->sname, _T("%membername: PDF member card"));{/php}"/></a>
