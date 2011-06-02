@@ -40,16 +40,20 @@ require_once $base_path . 'includes/galette.inc.php';
 require_once $base_path . 'classes/pdf.class.php';
 require_once $base_path . 'classes/adherent.class.php';
 
-//If not logged, or if admin without a member id ; print en empty card
-if ( !$login->isLogged() or $login->isAdmin() && (!isset($_GET[Adherent::PK]) || trim($_GET[Adherent::PK]) == '') ) {
+if ( !$login->isLogged() or $login->isAdmin()
+    && (!isset($_GET[Adherent::PK]) || trim($_GET[Adherent::PK]) == '')
+) {
+    //If not logged, or if admin without a member id ; print en empty card
     $adh = null;
-//If admin with a member id
 } else if ( $login->isAdmin() && isset($_GET[Adherent::PK]) ) {
+    //If admin with a member id
     $adh = new Adherent((int)$_GET[Adherent::PK]);
-//If user logged in
 } else if ( $login->isLogged() ) {
+    //If user logged in
     $adh = new Adherent((int)$login->id);
 }
+
+define('FULLCARD_FONT', PDF::FONT_SIZE-2);
 
 $pdf=new PDF('P', 'mm', 'A4');
 $pdf->setMargins(10, 10);
@@ -57,17 +61,12 @@ $pdf->setMargins(10, 10);
 $pdf->SetAutoPageBreak(false, 20);
 $pdf->AliasNbPages();
 $pdf->Open();
-/*$pdf->AddFont('gill', '', 'gill.php');
-$pdf->AddFont('gillb', '', 'gillb.php');
-$pdf->SetFont('gill', '', 11);*/
-/** TODO: vary fonts sizes */
-$pdf->SetFont(PDF::FONT, '', PDF::FONT_SIZE);
+
+$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
 $pdf->SetTextColor(0, 0, 0);
 
-//$pdf->SetTitle(utf8_decode($heads["titre"]));
 $pdf->AddPage();
 $picture = new picture(0);
-//$pdf->Logo($picture->FILE_PATH);
 $pdf->PageHeader();
 
 $pdf->SetDrawColor(180, 180, 180);
@@ -77,21 +76,18 @@ $pdf->Ln(10);
 $pdf->Line($pdf->GetX(), $pdf->GetY(), 200, $pdf->GetY());
 $pdf->Ln(3);
 $pdf->SetTextColor(0, 0, 0);
-/** TODO: vary fonts sizes */
-$pdf->SetFont(PDF::FONT, '', PDF::FONT_SIZE - 1);
+$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT - 1);
 $pdf->MultiCell(0, 4, _T("Complete the following form and send it with your funds, in order to complete your subscription."), 0, 'J');
 
 $pdf->ln(2);
-$pdf->SetFont(PDF::FONT, '', PDF::FONT_SIZE);
-/** TODO: vary fonts sizes */
+$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
 /** TODO: set Adress to one of the staff members from preferences */
 $pdf->MultiCell(0, 4, "Thomas Canniot\nTrésorier de l'association Fedora-fr\n25 avenue Jean-Jaurès\n08000 CHARLEVILLE-MÉZIÈRES - FRANCE", 0, 'C');
 $pdf->Ln(3);
 $pdf->Line($pdf->GetX(), $pdf->GetY(), 200, $pdf->GetY());
 
 $pdf->Ln(10);
-/** TODO: vary fonts sizes */
-$pdf->SetFont(PDF::FONT, '', PDF::FONT_SIZE + 2);
+$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT + 2);
 
 //let's draw all fields
 $y = $pdf->GetY()+1;
@@ -112,18 +108,11 @@ $pdf->Rect($pdf->GetX(), $y, 3, 3);
 $pdf->SetX($pdf->GetX()+3);
 $pdf->Write(5, _T("Donation"));
 $pdf->Ln();
-/** TODO: vary fonts sizes */
-$pdf->SetFont(PDF::FONT, '', PDF::FONT_SIZE);
-$pdf->Write(4, "Les cotisations minimales pour chacun des types d'adhésions sont fixées ");
-$x_orig = $pdf->GetX()+1;
-$pdf->Write(4, "sur le site web de l'association.", "http://asso.fedora-fr.org/Comment_devenir_membre_%3F#Cotisation");
-$x_end = $pdf->GetX()+1;
-$pdf->Line($x_orig, $pdf->GetY()+4, $x_end, $pdf->GetY()+4);
-$pdf->Write(4, " Le montant des dons est quant à lui laissé à l'entière appréciation des généreux donnateurs, avec un minimum correspondant à la cotisation annuelle de base.");
+$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
+$pdf->Write(4, _T("The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be dcided by the generous donor."));
 $pdf->Ln(20);
 
-/** TODO: vary fonts sizes */
-$pdf->SetFont(PDF::FONT, '', PDF::FONT_SIZE + 2);
+$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT + 2);
 $y = $pdf->GetY()+1;
 $pdf->Cell(30, 5, _T("Politeness"), 0, 0, 'L');
 $pdf->Rect($pdf->GetX(), $y, 3, 3);
@@ -151,13 +140,13 @@ if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->name, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
-$pdf->Cell(30, 7, rtrim(_T("First name:"), "&nbsp;:"), 0, (($adh === null)?1:0), 'L');
+$pdf->Cell(30, 7, _T("First name"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->surname, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
-$pdf->Cell(30, 7, rtrim(_T("Address:"), "&nbsp;:"), 0, (($adh === null)?1:0), 'L');
+$pdf->Cell(30, 7, _T("Address"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->adress, 0, 1, 'L');
 }
@@ -171,20 +160,20 @@ $pdf->SetY($pdf->GetY() + 7);
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
 $y = $pdf->GetY();
-$pdf->Cell(30, 7, rtrim(_T("Zip Code:"), "&nbsp;:"), 0, (($adh === null)?1:0), 'L');
+$pdf->Cell(30, 7, _T("Zip Code"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->zipcode, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, $pdf->GetX()+30+15, $pdf->GetY()-1);
 $pdf->SetY($y);
 $pdf->SetX($pdf->GetX()+30+15+5);
-$pdf->Cell(30, 7, rtrim(_T("City:"), "&nbsp;:"), 0, (($adh === null)?1:0), 'L');
+$pdf->Cell(30, 7, _T("City"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->town, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30+15+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
-$pdf->Cell(30, 7, rtrim(_T("Country:"), "&nbsp;:"), 0, (($adh === null)?1:0), 'L');
+$pdf->Cell(30, 7, _T("Country"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->country, 0, 1, 'L');
 }
@@ -196,31 +185,36 @@ if ( $adh !== null ) {
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
-$pdf->Cell(30, 7, rtrim(_T("Username:"), "&nbsp;:")." **", 0, (($adh === null)?1:0), 'L');
+$pdf->Cell(30, 7, _T("Username") ." **", 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->login, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
 $pdf->Ln(6);
-$pdf->Cell(30, 7, rtrim(_T("Amount:"), "&nbsp;:"), 0, 1, 'L');
+$pdf->Cell(30, 7, _T("Amount"), 0, 1, 'L');
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
 $pdf->Ln(10);
-$pdf->Write(4, "Par la présente, je m'engage à respecter les statuts ainsi que ");
-$pdf->Write(4, "le règlement intérieur de l'association Fedora-fr.");
+$pdf->Write(
+    4,
+    preg_replace(
+        '/%s/',
+        $preferences->pref_nom,
+        _T("Hereby, I agree to comply to %s association's statutes and its rules.")
+    )
+);
 $pdf->Ln(10);
-$pdf->Cell(64, 5, "Fait à ", 0, 0, 'L');
-$pdf->Cell(0, 5, "Le            /            /            ", 0, 1, 'L');
+$pdf->Cell(64, 5, _T("At "), 0, 0, 'L');
+$pdf->Cell(0, 5, _T("On            /            /            "), 0, 1, 'L');
 $pdf->Ln(1);
-$pdf->Cell(0, 5, "Signature", 0, 1, 'L');
+$pdf->Cell(0, 5, _T("Signature"), 0, 1, 'L');
 
 
 $pdf->SetY(260);
-/** TODO: vary fonts sizes */
-$pdf->SetFont(PDF::FONT, '', PDF::FONT_SIZE - 2);
-$pdf->Cell(0, 3, "* Raison sociale pour les personnes morales", 0, 1, 'R');
-$pdf->Cell(0, 3, "** Identifiant sur le site de l'association, si applicable", 0, 1, 'R');
+$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT - 2);
+$pdf->Cell(0, 3, _T("* Company names for compagnies"), 0, 1, 'R');
+$pdf->Cell(0, 3, _T("** Galette identifier, if applicable"), 0, 1, 'R');
 
 $pdf->Output(_T("fullcard") . '.pdf', 'D');
 

@@ -1,0 +1,132 @@
+#: ../fullcard.php:219
+msgid "fullcard"
+msgstr ""
+
+#: ../fullcard.php:136
+msgid "Society"
+msgstr ""
+
+#: ../fullcard.php:163
+msgid "Zip Code"
+msgstr ""
+
+#: ../fullcard.php:182
+msgid "Email adress"
+msgstr ""
+
+#: ../fullcard.php:208
+msgid "At "
+msgstr ""
+
+#: ../fullcard.php:100
+msgid "Active member"
+msgstr ""
+
+#: ../fullcard.php:195
+msgid "Amount"
+msgstr ""
+
+#: ../fullcard.php:126
+msgid "Miss"
+msgstr ""
+
+#: ../fullcard.php:149
+msgid "Address"
+msgstr ""
+
+#: ../fullcard.php:131
+msgid "Mister"
+msgstr ""
+
+#: ../templates/default/adh_fiche_action.tpl:2
+msgid "Adherent file card"
+msgstr ""
+
+#: ../fullcard.php:211
+msgid "Signature"
+msgstr ""
+
+#: ../templates/default/menu.tpl:4
+msgid "Empty card"
+msgstr ""
+
+#: ../fullcard.php:170
+msgid "City"
+msgstr ""
+
+#: ../fullcard.php:217
+msgid "** Galette identifier, if applicable"
+msgstr ""
+
+#: ../fullcard.php:105
+msgid "Benefactor member"
+msgstr ""
+
+#: ../templates/default/adh_actions.tpl:1
+msgid "%membername: PDF member card"
+msgstr ""
+
+#: ../fullcard.php:188
+msgid "Username"
+msgstr ""
+
+#: ../fullcard.php:112
+msgid "The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be dcided by the generous donor."
+msgstr ""
+
+#: ../fullcard.php:204
+msgid "Hereby, I agree to comply to %s association's statutes and its rules."
+msgstr ""
+
+#: ../fullcard.php:94
+msgid "Required membership:"
+msgstr ""
+
+#: ../fullcard.php:121
+msgid "Mrs"
+msgstr ""
+
+#: ../templates/default/adh_actions.tpl:1
+msgid "PDF member card"
+msgstr ""
+
+#: ../fullcard.php:138
+msgid "Name"
+msgstr ""
+
+#: ../fullcard.php:80
+msgid "Complete the following form and send it with your funds, in order to complete your subscription."
+msgstr ""
+
+#: ../templates/default/menu.tpl:2
+msgid "Full card"
+msgstr ""
+
+#: ../fullcard.php:143
+msgid "First name"
+msgstr ""
+
+#: ../fullcard.php:117
+msgid "Politeness"
+msgstr ""
+
+#: ../fullcard.php:176
+msgid "Country"
+msgstr ""
+
+#: ../fullcard.php:216
+msgid "* Company names for compagnies"
+msgstr ""
+
+#: ../templates/default/menu.tpl:4
+msgid "Generates an empty member card you can print for events, for example"
+msgstr ""
+
+#: ../fullcard.php:109
+msgid "Donation"
+msgstr ""
+
+#: ../fullcard.php:209
+msgid "On            /            /            "
+msgstr ""
+

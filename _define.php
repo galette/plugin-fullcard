@@ -36,11 +36,11 @@
  */
 
 $this->register(
-	'Galette Fullcard',				//Name
-	'Full member card as PDF',		//Short description
-	'Johan Cwiklinski',				//Author
-	'1.0',						//Version
-	null						//Permissions needed - not yet implemented
+    'Galette Fullcard',         //Name
+    'Full member card as PDF',  //Short description
+    'Johan Cwiklinski',         //Author
+    '1.0',                      //Version
+    null                        //Permissions needed - not yet implemented
 );
 
 ?>
