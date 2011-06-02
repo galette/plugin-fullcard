@@ -82,7 +82,7 @@ $pdf->MultiCell(0, 4, _T("Complete the following form and send it with your fund
 $pdf->ln(2);
 $pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
 /** TODO: set Adress to one of the staff members from preferences */
-$pdf->MultiCell(0, 4, "Thomas Canniot\nTrésorier de l'association Fedora-fr\n25 avenue Jean-Jaurès\n08000 CHARLEVILLE-MÉZIÈRES - FRANCE", 0, 'C');
+$pdf->MultiCell(0, 4, $preferences->getPostalAdress(), 0, 'C');
 $pdf->Ln(3);
 $pdf->Line($pdf->GetX(), $pdf->GetY(), 200, $pdf->GetY());
 
