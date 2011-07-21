@@ -67,7 +67,7 @@ $pdf->SetTextColor(0, 0, 0);
 
 $pdf->AddPage();
 $picture = new picture(0);
-$pdf->PageHeader();
+$pdf->PageHeader(_T("Adhesion form"));
 
 $pdf->SetDrawColor(180, 180, 180);
 $pdf->SetLineWidth(0.1);
