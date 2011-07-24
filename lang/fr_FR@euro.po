@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2011-06-02 12:05+0200\n"
+"PO-Revision-Date: 2011-07-24 10:51+0200\n"
 "Last-Translator: \n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -14,43 +14,43 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../fullcard.php:219
+#: ../fullcard.php:218
 msgid "fullcard"
-msgstr "fullcard"
+msgstr "fiche_adherent"
 
-#: ../fullcard.php:136
+#: ../fullcard.php:135
 msgid "Society"
 msgstr "Société"
 
-#: ../fullcard.php:163
+#: ../fullcard.php:162
 msgid "Zip Code"
 msgstr "Code postal"
 
-#: ../fullcard.php:182
+#: ../fullcard.php:181
 msgid "Email adress"
 msgstr "Courriel"
 
-#: ../fullcard.php:208
+#: ../fullcard.php:207
 msgid "At "
 msgstr "Fait à "
 
-#: ../fullcard.php:100
+#: ../fullcard.php:99
 msgid "Active member"
 msgstr "Membre actif"
 
-#: ../fullcard.php:195
+#: ../fullcard.php:194
 msgid "Amount"
 msgstr "Montant"
 
-#: ../fullcard.php:126
+#: ../fullcard.php:125
 msgid "Miss"
 msgstr "Mlle"
 
-#: ../fullcard.php:149
+#: ../fullcard.php:148
 msgid "Address"
 msgstr "Adresse"
 
-#: ../fullcard.php:131
+#: ../fullcard.php:130
 msgid "Mister"
 msgstr "Monsieur"
 
@@ -58,7 +58,11 @@ msgstr "Monsieur"
 msgid "Adherent file card"
 msgstr "Fiche adhérent"
 
-#: ../fullcard.php:211
+#: ../fullcard.php:104
+msgid "Benefactor member"
+msgstr "Membre bienfaiteur"
+
+#: ../fullcard.php:210
 msgid "Signature"
 msgstr "Signature"
 
@@ -66,27 +70,27 @@ msgstr "Signature"
 msgid "Empty card"
 msgstr "Carte vide"
 
-#: ../fullcard.php:170
+#: ../fullcard.php:169
 msgid "City"
 msgstr "Ville"
 
-#: ../fullcard.php:217
+#: ../fullcard.php:216
 msgid "** Galette identifier, if applicable"
 msgstr "** Identifiant Galette, si applicable"
 
-#: ../fullcard.php:105
-msgid "Benefactor member"
-msgstr "Membre bienfaiteur"
+#: ../fullcard.php:70
+msgid "Adhesion form"
+msgstr "Formulaire d'adhésion"
 
 #: ../templates/default/adh_actions.tpl:1
 msgid "%membername: PDF member card"
 msgstr "%membername: Fiche PDF"
 
-#: ../fullcard.php:188
+#: ../fullcard.php:187
 msgid "Username"
 msgstr "Identifiant"
 
-#: ../fullcard.php:112
+#: ../fullcard.php:111
 msgid ""
 "The minimum contribution for each type of membership are defined on the "
 "website of the association. The amount of donations are free to be dcided by "
@@ -96,17 +100,17 @@ msgstr ""
 "le site web de l'association. Le montant des dons est quant à lui laissé à "
 "l'entière appréciation des généreux donateurs."
 
-#: ../fullcard.php:204
+#: ../fullcard.php:203
 msgid "Hereby, I agree to comply to %s association's statutes and its rules."
 msgstr ""
 "Par la présente, je m'engage à respecter les statuts ainsi que le règlement "
 "intérieur de l'association %s."
 
-#: ../fullcard.php:94
+#: ../fullcard.php:93
 msgid "Required membership:"
 msgstr "Adhésion souhaitée :"
 
-#: ../fullcard.php:121
+#: ../fullcard.php:120
 msgid "Mrs"
 msgstr "Mme"
 
@@ -114,7 +118,7 @@ msgstr "Mme"
 msgid "PDF member card"
 msgstr "Fiche adhérent PDF"
 
-#: ../fullcard.php:138
+#: ../fullcard.php:137
 msgid "Name"
 msgstr "Nom"
 
@@ -130,19 +134,19 @@ msgstr ""
 msgid "Full card"
 msgstr "Fiche Adhérent"
 
-#: ../fullcard.php:143
+#: ../fullcard.php:142
 msgid "First name"
 msgstr "Prénom"
 
-#: ../fullcard.php:117
+#: ../fullcard.php:116
 msgid "Politeness"
 msgstr "Civilité"
 
-#: ../fullcard.php:176
+#: ../fullcard.php:175
 msgid "Country"
 msgstr "Pays"
 
-#: ../fullcard.php:216
+#: ../fullcard.php:215
 msgid "* Company names for compagnies"
 msgstr "* Raison sociale pour les sociéétés"
 
@@ -152,11 +156,11 @@ msgstr ""
 "Génère une fiche adhérent vierge que vous pourrez imprimer pour des "
 "évènements, par exemple"
 
-#: ../fullcard.php:109
+#: ../fullcard.php:108
 msgid "Donation"
 msgstr "Don"
 
-#: ../fullcard.php:209
+#: ../fullcard.php:208
 msgid "On            /            /            "
 msgstr "Le            /            /            "
 
