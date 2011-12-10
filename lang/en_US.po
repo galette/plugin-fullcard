@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2011-07-24 10:48+0200\n"
+"PO-Revision-Date: 2011-12-10 05:31+0100\n"
 "Last-Translator: \n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -17,10 +17,6 @@ msgstr ""
 #: ../fullcard.php:218
 msgid "fullcard"
 msgstr "fullcard"
-
-#: ../fullcard.php:135
-msgid "Society"
-msgstr "Society"
 
 #: ../fullcard.php:162
 msgid "Zip Code"
@@ -61,6 +57,10 @@ msgstr "Adherent file card"
 #: ../fullcard.php:104
 msgid "Benefactor member"
 msgstr "Benefactor member"
+
+#: ../fullcard.php:215
+msgid "* Only for compagnies"
+msgstr "* Only for compagnies"
 
 #: ../fullcard.php:210
 msgid "Signature"
@@ -116,7 +116,7 @@ msgstr "Mrs"
 msgid "PDF member card"
 msgstr "PDF member card"
 
-#: ../fullcard.php:137
+#: ../fullcard.php:132
 msgid "Name"
 msgstr "Name"
 
@@ -144,13 +144,13 @@ msgstr "Politeness"
 msgid "Country"
 msgstr "Country"
 
-#: ../fullcard.php:215
-msgid "* Company names for compagnies"
-msgstr "* Company names for compagnies"
-
 #: ../templates/default/menu.tpl:4
 msgid "Generates an empty member card you can print for events, for example"
 msgstr "Generates an empty member card you can print for events, for example"
+
+#: ../fullcard.php:137
+msgid "Company name"
+msgstr "Company name"
 
 #: ../fullcard.php:108
 msgid "Donation"
@@ -160,3 +160,5 @@ msgstr "Donation"
 msgid "On            /            /            "
 msgstr "On            /            /            "
 
+#~ msgid "Society"
+#~ msgstr "Society"

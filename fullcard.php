@@ -128,15 +128,15 @@ $pdf->Rect($pdf->GetX()+30, $y, 3, 3);
 $pdf->SetX($pdf->GetX()+(($adh === null)?33:30));
 $pdf->Cell(3, 5, ($adh !== null && $adh->politeness == Politeness::MR) ? 'X' : '', 0, 0, 'C');
 $pdf->Cell(0, 5, _T("Mister"), 0, 1, 'L');
-$y = $pdf->GetY()+1;
-$pdf->Rect($pdf->GetX()+30, $y, 3, 3);
-$pdf->SetX($pdf->GetX()+(($adh === null)?33:30));
-$pdf->Cell(3, 5, ($adh !== null && $adh->politeness == Politeness::COMPANY)?"X":"", 0, 0, 'C');
-$pdf->Cell(0, 5, _T("Society"), 0, 1, 'L');
 
-$pdf->Cell(30, 7, _T("Name") . " *", 0, (($adh === null)?1:0), 'L');
+$pdf->Cell(30, 7, _T("Name"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->name, 0, 1, 'L');
+}
+$pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
+$pdf->Cell(30, 7, _T("Company name") . " *", 0, (($adh === null)?1:0), 'L');
+if ( $adh !== null ) {
+    $pdf->Cell(0, 7, $adh->company_name, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 $pdf->Cell(30, 7, _T("First name"), 0, (($adh === null)?1:0), 'L');
@@ -212,7 +212,7 @@ $pdf->Cell(0, 5, _T("Signature"), 0, 1, 'L');
 
 $pdf->SetY(260);
 $pdf->SetFont(PDF::FONT, '', FULLCARD_FONT - 2);
-$pdf->Cell(0, 3, _T("* Company names for compagnies"), 0, 1, 'R');
+$pdf->Cell(0, 3, _T("* Only for compagnies"), 0, 1, 'R');
 $pdf->Cell(0, 3, _T("** Galette identifier, if applicable"), 0, 1, 'R');
 
 $pdf->Output(_T("fullcard") . '.pdf', 'D');

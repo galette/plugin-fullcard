@@ -2,10 +2,6 @@
 msgid "fullcard"
 msgstr ""
 
-#: ../fullcard.php:135
-msgid "Society"
-msgstr ""
-
 #: ../fullcard.php:162
 msgid "Zip Code"
 msgstr ""
@@ -44,6 +40,10 @@ msgstr ""
 
 #: ../fullcard.php:104
 msgid "Benefactor member"
+msgstr ""
+
+#: ../fullcard.php:215
+msgid "* Only for compagnies"
 msgstr ""
 
 #: ../fullcard.php:210
@@ -94,7 +94,7 @@ msgstr ""
 msgid "PDF member card"
 msgstr ""
 
-#: ../fullcard.php:137
+#: ../fullcard.php:132
 msgid "Name"
 msgstr ""
 
@@ -118,12 +118,12 @@ msgstr ""
 msgid "Country"
 msgstr ""
 
-#: ../fullcard.php:215
-msgid "* Company names for compagnies"
-msgstr ""
-
 #: ../templates/default/menu.tpl:4
 msgid "Generates an empty member card you can print for events, for example"
+msgstr ""
+
+#: ../fullcard.php:137
+msgid "Company name"
 msgstr ""
 
 #: ../fullcard.php:108

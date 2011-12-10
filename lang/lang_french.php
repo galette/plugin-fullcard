@@ -1,5 +1,5 @@
 <?php
-// This file was automatically generated on Sun Jul 24 08:51:56 2011 (GMT)
+// This file was automatically generated on Sat Dec 10 04:32:04 2011 (GMT)
 // Don't modify it by hand, rather use the target lang from the Makefile.
 
 
@@ -27,11 +27,11 @@ $lang['PDF member card'] = 'Fiche adhérent PDF';
 // ../fullcard.php:116 
 $lang['Politeness'] = 'Civilité';
 
-// ../fullcard.php:215 
-$lang['* Company names for compagnies'] = '* Raison sociale pour les sociéétés';
-
 // ../fullcard.php:218 
 $lang['fullcard'] = 'fiche_adherent';
+
+// ../fullcard.php:137 
+$lang['Company name'] = 'Raison sociale';
 
 // ../fullcard.php:187 
 $lang['Username'] = 'Identifiant';
@@ -51,10 +51,13 @@ $lang['First name'] = 'Prénom';
 // ../fullcard.php:108 
 $lang['Donation'] = 'Don';
 
+// ../fullcard.php:215 
+$lang['* Only for compagnies'] = '* Uniquement pour les sociéétés';
+
 // ../fullcard.php:148 
 $lang['Address'] = 'Adresse';
 
-// ../fullcard.php:137 
+// ../fullcard.php:132 
 $lang['Name'] = 'Nom';
 
 // ../fullcard.php:175 
@@ -89,9 +92,6 @@ $lang['Hereby, I agree to comply to %s association\'s statutes and its rules.'] 
 
 // ../fullcard.php:125 
 $lang['Miss'] = 'Mlle';
-
-// ../fullcard.php:135 
-$lang['Society'] = 'Société';
 
 // ../templates/default/adh_fiche_action.tpl:2 
 $lang['Adherent file card'] = 'Fiche adhérent';

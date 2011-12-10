@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2011-07-24 10:51+0200\n"
+"PO-Revision-Date: 2011-12-10 05:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -17,10 +17,6 @@ msgstr ""
 #: ../fullcard.php:218
 msgid "fullcard"
 msgstr "fiche_adherent"
-
-#: ../fullcard.php:135
-msgid "Society"
-msgstr "Société"
 
 #: ../fullcard.php:162
 msgid "Zip Code"
@@ -61,6 +57,10 @@ msgstr "Fiche adhérent"
 #: ../fullcard.php:104
 msgid "Benefactor member"
 msgstr "Membre bienfaiteur"
+
+#: ../fullcard.php:215
+msgid "* Only for compagnies"
+msgstr "* Uniquement pour les sociéétés"
 
 #: ../fullcard.php:210
 msgid "Signature"
@@ -118,7 +118,7 @@ msgstr "Mme"
 msgid "PDF member card"
 msgstr "Fiche adhérent PDF"
 
-#: ../fullcard.php:137
+#: ../fullcard.php:132
 msgid "Name"
 msgstr "Nom"
 
@@ -146,15 +146,15 @@ msgstr "Civilité"
 msgid "Country"
 msgstr "Pays"
 
-#: ../fullcard.php:215
-msgid "* Company names for compagnies"
-msgstr "* Raison sociale pour les sociéétés"
-
 #: ../templates/default/menu.tpl:4
 msgid "Generates an empty member card you can print for events, for example"
 msgstr ""
 "Génère une fiche adhérent vierge que vous pourrez imprimer pour des "
 "évènements, par exemple"
+
+#: ../fullcard.php:137
+msgid "Company name"
+msgstr "Raison sociale"
 
 #: ../fullcard.php:108
 msgid "Donation"
@@ -164,3 +164,5 @@ msgstr "Don"
 msgid "On            /            /            "
 msgstr "Le            /            /            "
 
+#~ msgid "Society"
+#~ msgstr "Société"
