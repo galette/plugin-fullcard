@@ -1,5 +1,5 @@
 <?php
-// This file was automatically generated on Sat Dec 10 04:32:04 2011 (GMT)
+// This file was automatically generated on Wed Feb  1 21:19:51 2012 (GMT)
 // Don't modify it by hand, rather use the target lang from the Makefile.
 
 
@@ -52,7 +52,7 @@ $lang['First name'] = 'Prénom';
 $lang['Donation'] = 'Don';
 
 // ../fullcard.php:215 
-$lang['* Only for compagnies'] = '* Uniquement pour les sociéétés';
+$lang['* Only for compagnies'] = '* Uniquement pour les personnes morales';
 
 // ../fullcard.php:148 
 $lang['Address'] = 'Adresse';
@@ -73,7 +73,7 @@ $lang['Required membership:'] = 'Adhésion souhaitée :';
 $lang['%membername: PDF member card'] = '%membername: Fiche PDF';
 
 // ../fullcard.php:120 
-$lang['Mrs'] = 'Mme';
+$lang['Mrs'] = 'Madame';
 
 // ../fullcard.php:194 
 $lang['Amount'] = 'Montant';

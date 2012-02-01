@@ -1,10 +1,10 @@
 # Header entry was created by Lokalize.
 #
-# , 2011.
+# , 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2011-12-10 05:32+0100\n"
+"PO-Revision-Date: 2012-02-01 19:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -60,7 +60,7 @@ msgstr "Membre bienfaiteur"
 
 #: ../fullcard.php:215
 msgid "* Only for compagnies"
-msgstr "* Uniquement pour les sociéétés"
+msgstr "* Uniquement pour les personnes morales"
 
 #: ../fullcard.php:210
 msgid "Signature"
@@ -112,7 +112,7 @@ msgstr "Adhésion souhaitée :"
 
 #: ../fullcard.php:120
 msgid "Mrs"
-msgstr "Mme"
+msgstr "Madame"
 
 #: ../templates/default/adh_actions.tpl:1
 msgid "PDF member card"
