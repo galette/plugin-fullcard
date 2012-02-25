@@ -1,10 +1,10 @@
 # Header entry was created by Lokalize.
 #
-# , 2011.
+# , 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2011-12-10 05:31+0100\n"
+"PO-Revision-Date: 2012-02-25 16:05+0100\n"
 "Last-Translator: \n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -66,6 +66,10 @@ msgstr "* Only for compagnies"
 msgid "Signature"
 msgstr "Signature"
 
+#: ../fullcard.php:216
+msgid "** Galette identifier, if applicable"
+msgstr "** Galette identifier, if applicable"
+
 #: ../templates/default/menu.tpl:4
 msgid "Empty card"
 msgstr "Empty card"
@@ -74,9 +78,9 @@ msgstr "Empty card"
 msgid "City"
 msgstr "City"
 
-#: ../fullcard.php:216
-msgid "** Galette identifier, if applicable"
-msgstr "** Galette identifier, if applicable"
+#: ../fullcard.php:132
+msgid "Name"
+msgstr "Name"
 
 #: ../fullcard.php:70
 msgid "Adhesion form"
@@ -89,16 +93,6 @@ msgstr "%membername: PDF member card"
 #: ../fullcard.php:187
 msgid "Username"
 msgstr "Username"
-
-#: ../fullcard.php:111
-msgid ""
-"The minimum contribution for each type of membership are defined on the "
-"website of the association. The amount of donations are free to be dcided by "
-"the generous donor."
-msgstr ""
-"The minimum contribution for each type of membership are defined on the "
-"website of the association. The amount of donations are free to be dcided by "
-"the generous donor."
 
 #: ../fullcard.php:203
 msgid "Hereby, I agree to comply to %s association's statutes and its rules."
@@ -116,9 +110,15 @@ msgstr "Mrs"
 msgid "PDF member card"
 msgstr "PDF member card"
 
-#: ../fullcard.php:132
-msgid "Name"
-msgstr "Name"
+#: ../fullcard.php:111
+msgid ""
+"The minimum contribution for each type of membership are defined on the "
+"website of the association. The amount of donations are free to be decided "
+"by the generous donor."
+msgstr ""
+"The minimum contribution for each type of membership are defined on the "
+"website of the association. The amount of donations are free to be decided "
+"by the generous donor."
 
 #: ../fullcard.php:80
 msgid ""

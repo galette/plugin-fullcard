@@ -108,7 +108,7 @@ $pdf->SetX($pdf->GetX()+3);
 $pdf->Write(5, _T("Donation"));
 $pdf->Ln();
 $pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
-$pdf->Write(4, _T("The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be dcided by the generous donor."));
+$pdf->Write(4, _T("The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be decided by the generous donor."));
 $pdf->Ln(20);
 
 $pdf->SetFont(PDF::FONT, '', FULLCARD_FONT + 2);
