@@ -74,14 +74,15 @@ $pdf->SetLineWidth(0.1);
 
 $pdf->Ln(10);
 $pdf->Line($pdf->GetX(), $pdf->GetY(), 200, $pdf->GetY());
-$pdf->Ln(3);
+$pdf->Ln(2);
 $pdf->SetTextColor(0, 0, 0);
 $pdf->SetFont(PDF::FONT, '', FULLCARD_FONT - 1);
-$pdf->MultiCell(0, 4, _T("Complete the following form and send it with your funds, in order to complete your subscription."), 0, 'J');
+$pdf->MultiCell(0, 4, _T("Complete the following form and send it with your funds, in order to complete your subscription."), 0, 'L');
 
 $pdf->ln(2);
 $pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
-$pdf->MultiCell(0, 4, $preferences->getPostalAdress(), 0, 'C');
+$pdf->SetX(100);
+$pdf->MultiCell(0, 4, $preferences->getPostalAdress(), 0, 'L');
 $pdf->Ln(3);
 $pdf->Line($pdf->GetX(), $pdf->GetY(), 200, $pdf->GetY());
 

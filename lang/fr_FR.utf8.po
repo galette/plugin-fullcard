@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2012-02-25 16:05+0100\n"
+"PO-Revision-Date: 2012-02-26 13:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
@@ -40,7 +40,7 @@ msgstr "Montant"
 
 #: ../fullcard.php:125
 msgid "Miss"
-msgstr "Mlle"
+msgstr "Mademoiselle"
 
 #: ../fullcard.php:148
 msgid "Address"

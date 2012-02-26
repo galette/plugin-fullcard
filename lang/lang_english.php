@@ -1,13 +1,10 @@
 <?php
-// This file was automatically generated on Sat Dec 10 04:32:04 2011 (GMT)
+// This file was automatically generated on Sun Feb 26 13:02:51 2012 (GMT)
 // Don't modify it by hand, rather use the target lang from the Makefile.
 
 
 // ../fullcard.php:169 
 $lang['City'] = 'City';
-
-// ../fullcard.php:111 
-$lang['The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be dcided by the generous donor.'] = 'The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be dcided by the generous donor.';
 
 // ../fullcard.php:207 
 $lang['At '] = 'At ';
@@ -92,6 +89,9 @@ $lang['Hereby, I agree to comply to %s association\'s statutes and its rules.'] 
 
 // ../fullcard.php:125 
 $lang['Miss'] = 'Miss';
+
+// ../fullcard.php:111 
+$lang['The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be decided by the generous donor.'] = 'The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be decided by the generous donor.';
 
 // ../templates/default/adh_fiche_action.tpl:2 
 $lang['Adherent file card'] = 'Adherent file card';
