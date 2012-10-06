@@ -35,10 +35,13 @@
  * @since     Available since 0.7dev - 2011-05-30
  */
 
+use Galette\Core\Logo as Logo;
+use Galette\IO\Pdf as Pdf;
+use Galette\Entity\Adherent as Adherent;
+use Galette\Entity\Politeness as Politeness;
+
 $base_path = '../../';
 require_once $base_path . 'includes/galette.inc.php';
-require_once $base_path . 'classes/pdf.class.php';
-require_once $base_path . 'classes/adherent.class.php';
 
 if ( !$login->isLogged() or $login->isAdmin()
     && (!isset($_GET[Adherent::PK]) || trim($_GET[Adherent::PK]) == '')
@@ -53,20 +56,20 @@ if ( !$login->isLogged() or $login->isAdmin()
     $adh = new Adherent((int)$login->id);
 }
 
-define('FULLCARD_FONT', PDF::FONT_SIZE-2);
+define('FULLCARD_FONT', Pdf::FONT_SIZE-2);
 
-$pdf=new PDF('P', 'mm', 'A4');
+$pdf=new Pdf('P', 'mm', 'A4');
 $pdf->setMargins(10, 10);
 
 $pdf->SetAutoPageBreak(false, 20);
 $pdf->AliasNbPages();
 $pdf->Open();
 
-$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
+$pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT);
 $pdf->SetTextColor(0, 0, 0);
 
 $pdf->AddPage();
-$picture = new picture(0);
+$picture = new Logo();
 $pdf->PageHeader(_T("Adhesion form"));
 
 $pdf->SetDrawColor(180, 180, 180);
@@ -74,19 +77,20 @@ $pdf->SetLineWidth(0.1);
 
 $pdf->Ln(10);
 $pdf->Line($pdf->GetX(), $pdf->GetY(), 200, $pdf->GetY());
-$pdf->Ln(3);
+$pdf->Ln(2);
 $pdf->SetTextColor(0, 0, 0);
-$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT - 1);
-$pdf->MultiCell(0, 4, _T("Complete the following form and send it with your funds, in order to complete your subscription."), 0, 'J');
+$pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT - 1);
+$pdf->MultiCell(0, 4, _T("Complete the following form and send it with your funds, in order to complete your subscription."), 0, 'L');
 
 $pdf->ln(2);
-$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
-$pdf->MultiCell(0, 4, $preferences->getPostalAdress(), 0, 'C');
+$pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT);
+$pdf->SetX(100);
+$pdf->MultiCell(0, 4, $preferences->getPostalAdress(), 0, 'L');
 $pdf->Ln(3);
 $pdf->Line($pdf->GetX(), $pdf->GetY(), 200, $pdf->GetY());
 
 $pdf->Ln(10);
-$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT + 2);
+$pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT + 2);
 
 //let's draw all fields
 $y = $pdf->GetY()+1;
@@ -107,11 +111,11 @@ $pdf->Rect($pdf->GetX(), $y, 3, 3);
 $pdf->SetX($pdf->GetX()+3);
 $pdf->Write(5, _T("Donation"));
 $pdf->Ln();
-$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT);
-$pdf->Write(4, _T("The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be dcided by the generous donor."));
+$pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT);
+$pdf->Write(4, _T("The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be decided by the generous donor."));
 $pdf->Ln(20);
 
-$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT + 2);
+$pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT + 2);
 $y = $pdf->GetY()+1;
 $pdf->Cell(30, 5, _T("Politeness"), 0, 0, 'L');
 $pdf->Rect($pdf->GetX(), $y, 3, 3);
@@ -211,7 +215,7 @@ $pdf->Cell(0, 5, _T("Signature"), 0, 1, 'L');
 
 
 $pdf->SetY(260);
-$pdf->SetFont(PDF::FONT, '', FULLCARD_FONT - 2);
+$pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT - 2);
 $pdf->Cell(0, 3, _T("* Only for compagnies"), 0, 1, 'R');
 $pdf->Cell(0, 3, _T("** Galette identifier, if applicable"), 0, 1, 'R');
 

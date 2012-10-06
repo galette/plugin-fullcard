@@ -35,5 +35,5 @@
  * @since     Available since 0.7dev - 2011-06-01
  */
 
-define('FULLCARD_SMARTY_PREFIX', 'plugins|fullcard');
+define('FULLCARD_SMARTY_PREFIX', 'plugins_fullcard');
 ?>

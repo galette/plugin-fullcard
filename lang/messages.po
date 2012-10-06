@@ -50,6 +50,10 @@ msgstr ""
 msgid "Signature"
 msgstr ""
 
+#: ../fullcard.php:216
+msgid "** Galette identifier, if applicable"
+msgstr ""
+
 #: ../templates/default/menu.tpl:4
 msgid "Empty card"
 msgstr ""
@@ -58,8 +62,8 @@ msgstr ""
 msgid "City"
 msgstr ""
 
-#: ../fullcard.php:216
-msgid "** Galette identifier, if applicable"
+#: ../fullcard.php:132
+msgid "Name"
 msgstr ""
 
 #: ../fullcard.php:70
@@ -72,10 +76,6 @@ msgstr ""
 
 #: ../fullcard.php:187
 msgid "Username"
-msgstr ""
-
-#: ../fullcard.php:111
-msgid "The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be dcided by the generous donor."
 msgstr ""
 
 #: ../fullcard.php:203
@@ -94,8 +94,8 @@ msgstr ""
 msgid "PDF member card"
 msgstr ""
 
-#: ../fullcard.php:132
-msgid "Name"
+#: ../fullcard.php:111
+msgid "The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be decided by the generous donor."
 msgstr ""
 
 #: ../fullcard.php:80
