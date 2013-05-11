@@ -38,7 +38,6 @@
 use Galette\Core\Logo as Logo;
 use Galette\IO\Pdf as Pdf;
 use Galette\Entity\Adherent as Adherent;
-use Galette\Entity\Politeness as Politeness;
 
 $base_path = '../../';
 require_once $base_path . 'includes/galette.inc.php';
@@ -117,36 +116,25 @@ $pdf->Ln(20);
 
 $pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT + 2);
 $y = $pdf->GetY()+1;
-$pdf->Cell(30, 5, _T("Politeness"), 0, 0, 'L');
-$pdf->Rect($pdf->GetX(), $y, 3, 3);
-$pdf->SetX($pdf->GetX() + (($adh === null)? 3 : 0));
-$pdf->Cell(3, 5, ($adh !== null && $adh->politeness == Politeness::MISS) ? 'X' : '', 0, 0, 'C');
-$pdf->Cell(0, 5, _T("Mrs"), 0, 1, 'L');
-$y = $pdf->GetY()+1;
-$pdf->Rect($pdf->GetX()+30, $y, 3, 3);
-$pdf->SetX($pdf->GetX()+(($adh === null)?33:30));
-$pdf->Cell(3, 5, ($adh !== null && $adh->politeness == Politeness::MRS) ? 'X' : '', 0, 0, 'C');
-$pdf->Cell(0, 5, _T("Miss"), 0, 1, 'L');
-$y = $pdf->GetY()+1;
-$pdf->Rect($pdf->GetX()+30, $y, 3, 3);
-$pdf->SetX($pdf->GetX()+(($adh === null)?33:30));
-$pdf->Cell(3, 5, ($adh !== null && $adh->politeness == Politeness::MR) ? 'X' : '', 0, 0, 'C');
-$pdf->Cell(0, 5, _T("Mister"), 0, 1, 'L');
+$pdf->Cell(30, 7, _T("Politeness"), 0, 0, 'L');
+$pdf->Cell(0, 7, $adh->title->long, 0, 1, 'L');
+$pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
 $pdf->Cell(30, 7, _T("Name"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->name, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
-$pdf->Cell(30, 7, _T("Company name") . " *", 0, (($adh === null)?1:0), 'L');
-if ( $adh !== null ) {
-    $pdf->Cell(0, 7, $adh->company_name, 0, 1, 'L');
-}
-$pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 $pdf->Cell(30, 7, _T("First name"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
     $pdf->Cell(0, 7, $adh->surname, 0, 1, 'L');
 }
+$pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
+$pdf->Cell(30, 7, _T("Company name") . " *", 0, (($adh === null)?1:0), 'L');
+if ( $adh !== null ) {
+    $pdf->Cell(0, 7, $adh->company_name, 0, 1, 'L');
+}
+
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
 $pdf->Cell(30, 7, _T("Address"), 0, (($adh === null)?1:0), 'L');
