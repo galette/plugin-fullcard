@@ -57,11 +57,10 @@ if ( !$login->isLogged() or $login->isAdmin()
 
 define('FULLCARD_FONT', Pdf::FONT_SIZE-2);
 
-$pdf=new Pdf('P', 'mm', 'A4');
+$pdf=new Pdf();
 $pdf->setMargins(10, 10);
 
 $pdf->SetAutoPageBreak(false, 20);
-$pdf->AliasNbPages();
 $pdf->Open();
 
 $pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT);
