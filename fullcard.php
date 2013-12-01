@@ -116,7 +116,11 @@ $pdf->Ln(20);
 $pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT + 2);
 $y = $pdf->GetY()+1;
 $pdf->Cell(30, 7, _T("Politeness"), 0, 0, 'L');
-$pdf->Cell(0, 7, $adh->title->long, 0, 1, 'L');
+$title = '';
+if ( $adh->title ) {
+    $title = $adh->title->long;
+}
+$pdf->Cell(0, 7, $title, 0, 1, 'L');
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
 $pdf->Cell(30, 7, _T("Name"), 0, (($adh === null)?1:0), 'L');
@@ -208,4 +212,3 @@ $pdf->Cell(0, 3, _T("** Galette identifier, if applicable"), 0, 1, 'R');
 
 $pdf->Output(_T("fullcard") . '.pdf', 'D');
 
-?>
