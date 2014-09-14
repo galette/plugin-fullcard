@@ -3,10 +3,8 @@ INSTALLDIR = .
 LANGUAGES = en_US fr_FR.utf8
 PACKAGE = galette_fullcard
 MKLANG = ../../../lang/make_lang_l12n.py
-PHP_SOURCES = ../fullcard.php \
-../templates/default/menu.tpl \
-../templates/default/adh_fiche_action.tpl \
-../templates/default/adh_actions.tpl
+PHP_SOURCES = $(shell find ../ -maxdepth 1 -name \*.php) \
+              $(shell find ../templates -name \*.tpl)
 
 
 all : messages.po lang
