@@ -57,7 +57,7 @@ if ( !$login->isLogged() or $login->isAdmin()
 
 define('FULLCARD_FONT', Pdf::FONT_SIZE-2);
 
-$pdf=new Pdf();
+$pdf=new Pdf($preferences);
 $pdf->setMargins(10, 10);
 
 $pdf->SetAutoPageBreak(false, 20);
@@ -83,7 +83,7 @@ $pdf->MultiCell(0, 4, _T("Complete the following form and send it with your fund
 $pdf->ln(2);
 $pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT);
 $pdf->SetX(100);
-$pdf->MultiCell(0, 4, $preferences->getPostalAdress(), 0, 'L');
+$pdf->MultiCell(0, 4, $preferences->getPostalAddress(), 0, 'L');
 $pdf->Ln(3);
 $pdf->Line($pdf->GetX(), $pdf->GetY(), 200, $pdf->GetY());
 
