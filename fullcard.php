@@ -117,7 +117,7 @@ $pdf->SetFont(Pdf::FONT, '', FULLCARD_FONT + 2);
 $y = $pdf->GetY()+1;
 $pdf->Cell(30, 7, _T("Politeness"), 0, 0, 'L');
 $title = '';
-if ( $adh->title ) {
+if ( $adh !== null && $adh->title ) {
     $title = $adh->title->long;
 }
 $pdf->Cell(0, 7, $title, 0, 1, 'L');
