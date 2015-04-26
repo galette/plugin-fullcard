@@ -1,56 +1,52 @@
-#: ../fullcard.php:218
+#: ../fullcard.php:213
 msgid "fullcard"
 msgstr ""
 
-#: ../fullcard.php:162
+#: ../fullcard.php:157
 msgid "Zip Code"
 msgstr ""
 
-#: ../fullcard.php:181
+#: ../fullcard.php:176
 msgid "Email adress"
 msgstr ""
 
-#: ../fullcard.php:207
+#: ../fullcard.php:202
 msgid "At "
 msgstr ""
 
-#: ../fullcard.php:99
+#: ../fullcard.php:101
 msgid "Active member"
 msgstr ""
 
-#: ../fullcard.php:194
+#: ../fullcard.php:189
 msgid "Amount"
 msgstr ""
 
-#: ../fullcard.php:125
-msgid "Miss"
-msgstr ""
-
-#: ../fullcard.php:148
+#: ../fullcard.php:143
 msgid "Address"
-msgstr ""
-
-#: ../fullcard.php:130
-msgid "Mister"
 msgstr ""
 
 #: ../templates/default/adh_fiche_action.tpl:2
 msgid "Adherent file card"
 msgstr ""
 
-#: ../fullcard.php:104
+#: ../fullcard.php:106
 msgid "Benefactor member"
 msgstr ""
 
-#: ../fullcard.php:215
+#: ../fullcard.php:210
 msgid "* Only for compagnies"
 msgstr ""
 
-#: ../fullcard.php:210
+#: ../fullcard.php:205
 msgid "Signature"
 msgstr ""
 
-#: ../fullcard.php:216
+#: ../templates/default/public_menu.tpl:2
+msgid "Printable subscription form in PDF"
+msgstr ""
+
+#: ../fullcard.php:211
 msgid "** Galette identifier, if applicable"
 msgstr ""
 
@@ -58,15 +54,15 @@ msgstr ""
 msgid "Empty card"
 msgstr ""
 
-#: ../fullcard.php:169
+#: ../fullcard.php:164
 msgid "City"
 msgstr ""
 
-#: ../fullcard.php:132
+#: ../fullcard.php:126
 msgid "Name"
 msgstr ""
 
-#: ../fullcard.php:70
+#: ../fullcard.php:71
 msgid "Adhesion form"
 msgstr ""
 
@@ -74,31 +70,27 @@ msgstr ""
 msgid "%membername: PDF member card"
 msgstr ""
 
-#: ../fullcard.php:187
+#: ../fullcard.php:182
 msgid "Username"
 msgstr ""
 
-#: ../fullcard.php:203
+#: ../fullcard.php:198
 msgid "Hereby, I agree to comply to %s association's statutes and its rules."
 msgstr ""
 
-#: ../fullcard.php:93
+#: ../fullcard.php:95
 msgid "Required membership:"
-msgstr ""
-
-#: ../fullcard.php:120
-msgid "Mrs"
 msgstr ""
 
 #: ../templates/default/adh_actions.tpl:1
 msgid "PDF member card"
 msgstr ""
 
-#: ../fullcard.php:111
+#: ../fullcard.php:113
 msgid "The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be decided by the generous donor."
 msgstr ""
 
-#: ../fullcard.php:80
+#: ../fullcard.php:81
 msgid "Complete the following form and send it with your funds, in order to complete your subscription."
 msgstr ""
 
@@ -106,15 +98,15 @@ msgstr ""
 msgid "Full card"
 msgstr ""
 
-#: ../fullcard.php:142
+#: ../fullcard.php:131
 msgid "First name"
 msgstr ""
 
-#: ../fullcard.php:116
+#: ../fullcard.php:118
 msgid "Politeness"
 msgstr ""
 
-#: ../fullcard.php:175
+#: ../fullcard.php:170
 msgid "Country"
 msgstr ""
 
@@ -122,15 +114,19 @@ msgstr ""
 msgid "Generates an empty member card you can print for events, for example"
 msgstr ""
 
-#: ../fullcard.php:137
+#: ../fullcard.php:136
 msgid "Company name"
 msgstr ""
 
-#: ../fullcard.php:108
+#: ../templates/default/public_menu.tpl:2
+msgid "Subscribe PDF"
+msgstr ""
+
+#: ../fullcard.php:110
 msgid "Donation"
 msgstr ""
 
-#: ../fullcard.php:208
+#: ../fullcard.php:203
 msgid "On            /            /            "
 msgstr ""
 
