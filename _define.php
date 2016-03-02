@@ -39,10 +39,8 @@ $this->register(
     'Galette Fullcard',         //Name
     'Full member card as PDF',  //Short description
     'Johan Cwiklinski',         //Author
-    '1.6',                      //Version
-    '0.8',                      //Galette compatible version
+    '1.7dev',                   //Version
+    '0.9',                      //Galette compatible version
     '2016-09-18',               //Release date
-    null                        //Permissions needed - not yet implemented
+    []                          //Permissions needed
 );
-
-?>

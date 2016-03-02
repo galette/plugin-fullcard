@@ -1,3 +1,1 @@
-
-        <link rel="stylesheet" type="text/css" href="{$galette_base_path}{$fullcard_tpl_dir}galette_fullcard.css"/>
-
+        <link rel="stylesheet" type="text/css" href="{path_for name="plugin_res" data=["plugin" => $module_id, "path" => "galette_fullcard.css"]}"/>
