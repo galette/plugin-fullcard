@@ -49,10 +49,10 @@ $this->get(
         $member = null;
         if ($this->login->isAdmin() && isset($args['id'])) {
             //If admin with a member id
-            $member = new Adherent((int)$args['id']);
+            $member = new Adherent($this->zdb, (int)$args['id']);
         } elseif ($this->login->isLogged()) {
             //If user logged in
-            $member = new Adherent((int)$this->login->id);
+            $member = new Adherent($this->zdb, (int)$this->login->id);
         }
 
         $pdf = new PdfFullcard($this->preferences);
@@ -64,7 +64,7 @@ $this->get(
     '/localize-member/{id:\d+}',
     function ($request, $response, $args) use ($module, $module_id) {
         $id = $args['id'];
-        $member = new Adherent((int)$id);
+        $member = new Adherent($this->zdb, (int)$id);
 
         if ($this->login->id != $id
             && !$this->login->isAdmin()
@@ -172,7 +172,7 @@ $this->get(
             'groups'    => false,
             'dues'      => false
         );
-        $member = new Adherent($this->login->login, $deps);
+        $member = new Adherent($this->zdb, $this->login->login, $deps);
         return $response
             ->withStatus(301)
             ->withHeader('Location', $this->router->pathFor('maps_localize_member', ['id' => $member->id]));
@@ -248,14 +248,14 @@ $this->post(
             );
             $error = _T("Superadmin cannot be localized.");
         } elseif ($id === null) {
-            $member = new Adherent($login->login);
+            $member = new Adherent($this->zdb, $login->login);
             $id = $member->id;
         } elseif (!$login->isSuperAdmin()
             && !$login->isAdmin()
             && !$login->isStaff()
             && $login->isGroupManager()
         ) {
-            $member = new Adherent((int)$id);
+            $member = new Adherent($this->zdb, (int)$id);
             //check if current logged in user can manage loaded member
             $groups = $member->groups;
             $can_manage = false;
