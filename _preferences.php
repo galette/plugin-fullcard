@@ -3,11 +3,11 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
- * Configuration file for FullCard plugin
+ * Preferences override file for FullCard plugin
  *
  * PHP version 5
  *
- * Copyright © 2011-2014 The Galette Team
+ * Copyright © 2016 The Galette Team
  *
  * This file is part of Galette (http://galette.tuxfamily.org).
  *
@@ -28,21 +28,13 @@
  * @package   GaletteFullcard
  *
  * @author    Johan Cwiklinski <johan@x-tnd.be>
- * @copyright 2011-2014 The Galette Team
+ * @copyright 2016 The Galette Team
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @version   SVN: $Id$
  * @link      http://galette.tuxfamily.org
- * @since     Available since 0.7dev - 2011-05-31
+ * @since     Available since 0.8.3 - 2016-10-15
  */
 
-$this->register(
-    'Galette Fullcard',         //Name
-    'Full member card as PDF',  //Short description
-    'Johan Cwiklinski',         //Author
-    '1.6',                      //Version
-    '0.8',                      //Galette compatible version
-    '2016-09-18',               //Release date
-    null                        //Permissions needed - not yet implemented
+$_preferences = array(
+    'pref_adhesion_form_url' => 'plugins/'. $id .'/fullcard.php'
 );
-
-?>
