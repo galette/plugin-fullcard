@@ -1,1 +1,0 @@
-            <a href="{path_for name="fullcard" data=["id" => $member->id]}"><img src="{path_for name="plugin_res" data=["plugin" => $module_id, "path" => "images/icon-fullcard.png"]}" alt="{_T string="PDF member card"}" width="18" height="13" title="{_T string="%membername: PDF member card" pattern="/%membername/" replace=$member->sname}"/></a>
