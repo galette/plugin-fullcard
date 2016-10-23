@@ -142,12 +142,12 @@ $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 
 $pdf->Cell(30, 7, _T("Address"), 0, (($adh === null)?1:0), 'L');
 if ( $adh !== null ) {
-    $pdf->Cell(0, 7, $adh->adress, 0, 1, 'L');
+    $pdf->Cell(0, 7, $adh->address, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 $pdf->SetY($pdf->GetY() + 7);
 if ( $adh !== null ) {
-    $pdf->Cell(0, 7, $adh->adress_continuation, 0, 1, 'L');
+    $pdf->Cell(0, 7, $adh->address_continuation, 0, 1, 'L');
 }
 $pdf->Line($pdf->GetX()+30, $pdf->GetY()-1, 190, $pdf->GetY()-1);
 $pdf->SetY($pdf->GetY() + 7);
