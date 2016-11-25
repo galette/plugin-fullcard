@@ -189,12 +189,12 @@ class PdfFullcard extends PdfAdhesionForm
 
         $this->pdf->Cell(30, 7, _T("Address"), 0, (($member === null)?1:0), 'L');
         if ($member !== null) {
-            $this->pdf->Cell(0, 7, $member->adress, 0, 1, 'L');
+            $this->pdf->Cell(0, 7, $member->address, 0, 1, 'L');
         }
         $this->pdf->Line($this->pdf->GetX()+30, $this->pdf->GetY()-1, 190, $this->pdf->GetY()-1);
         $this->pdf->SetY($this->pdf->GetY() + 7);
         if ($member !== null) {
-            $this->pdf->Cell(0, 7, $member->adress_continuation, 0, 1, 'L');
+            $this->pdf->Cell(0, 7, $member->address_continuation, 0, 1, 'L');
         }
         $this->pdf->Line($this->pdf->GetX()+30, $this->pdf->GetY()-1, 190, $this->pdf->GetY()-1);
         $this->pdf->SetY($this->pdf->GetY() + 7);
@@ -220,7 +220,7 @@ class PdfFullcard extends PdfAdhesionForm
         }
         $this->pdf->Line($this->pdf->GetX()+30, $this->pdf->GetY()-1, 190, $this->pdf->GetY()-1);
 
-        $this->pdf->Cell(30, 7, _T("Email adress"), 0, (($member === null)?1:0), 'L');
+        $this->pdf->Cell(30, 7, _T("Email address"), 0, (($member === null)?1:0), 'L');
         if ($member !== null) {
             $this->pdf->Cell(0, 7, $member->email, 0, 1, 'L');
         }
