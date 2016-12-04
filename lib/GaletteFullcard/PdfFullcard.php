@@ -242,12 +242,12 @@ class PdfFullcard extends PdfAdhesionForm
             preg_replace(
                 '/%s/',
                 $this->prefs->pref_nom,
-                _T("Hereby, I agree to comply to %s association's statutes and its rules.")
+                _T("Hereby, I agree to comply to %s association statutes and its rules.")
             )
         );
         $this->pdf->Ln(10);
-        $this->pdf->Cell(64, 5, _T("At "), 0, 0, 'L');
-        $this->pdf->Cell(0, 5, _T("On            /            /            "), 0, 1, 'L');
+        $this->pdf->Cell(64, 5, _T("At ", "fullcard"), 0, 0, 'L');
+        $this->pdf->Cell(0, 5, _T("On            /            /            ", "fullcard"), 0, 1, 'L');
         $this->pdf->Ln(1);
         $this->pdf->Cell(0, 5, _T("Signature"), 0, 1, 'L');
 
