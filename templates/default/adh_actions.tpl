@@ -1,1 +1,0 @@
-            <a href="{$galette_base_path}{$fullcard_dir}fullcard.php?id_adh={$member->id}"><img src="{$fullcard_tpl_dir}images/icon-fullcard.png" alt="{_T string="PDF member card"}" width="18" height="13" title="{_T string="%membername: PDF member card" pattern="/%membername/" replace=$member->sname}"/></a>

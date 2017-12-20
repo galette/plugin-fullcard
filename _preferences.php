@@ -36,5 +36,5 @@
  */
 
 $_preferences = array(
-    'pref_adhesion_form_url' => 'plugins/'. $id .'/fullcard.php'
+    'pref_adhesion_form' => '\GaletteFullcard\PdfFullcard'
 );
