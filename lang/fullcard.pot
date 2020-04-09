@@ -10,99 +10,11 @@ msgstr ""
 msgid "Labels"
 msgstr ""
 
-#: ../lib/GaletteFullcard/PdfFullcard.php:118
-msgid "Adhesion form"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:128
-msgid "Complete the following form and send it with your funds, in order to complete your subscription."
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:142
-msgid "Required membership:"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:148
-msgid "Active member"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:153
-msgid "Benefactor member"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:157
-msgid "Donation"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:160
-msgid "The minimum contribution for each type of membership are defined on the website of the association. The amount of donations are free to be decided by the generous donor."
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:165
-msgid "Politeness"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:173
-msgid "Name"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:178
-msgid "First name"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:183
-msgid "Company name"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:190
-msgid "Address"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:204
-msgid "Zip Code"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:211
-msgid "City"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:217
-msgid "Country"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:223
-msgid "Email address"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:229
-msgid "Username"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:236
-msgid "Amount"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:245
-msgid "Hereby, I agree to comply to %s association statutes and its rules."
-msgstr ""
-
 #: ../lib/GaletteFullcard/PdfFullcard.php:249
 msgid "At "
 msgstr ""
 
 #: ../lib/GaletteFullcard/PdfFullcard.php:250
 msgid "On            /            /            "
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:252
-msgid "Signature"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:257
-msgid "* Only for compagnies"
-msgstr ""
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:258
-msgid "** Galette identifier, if applicable"
 msgstr ""
 

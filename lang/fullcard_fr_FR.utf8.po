@@ -27,94 +27,6 @@ msgstr "Généré par Galette"
 msgid "Labels"
 msgstr "Étiquettes"
 
-#: ../lib/GaletteFullcard/PdfFullcard.php:118
-msgid "Adhesion form"
-msgstr "Formulaire d'adhésion"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:128
-msgid ""
-"Complete the following form and send it with your funds, in order to "
-"complete your subscription."
-msgstr ""
-"Remplissez le formulaire suivant et joignez le lors de l'envoi de votre "
-"règlement, pour compléter votre inscription."
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:142
-msgid "Required membership:"
-msgstr "Adhésion souhaitée :"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:148
-msgid "Active member"
-msgstr "Membre actif"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:153
-msgid "Benefactor member"
-msgstr "Membre bienfaiteur"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:157
-msgid "Donation"
-msgstr "Don"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:160
-msgid ""
-"The minimum contribution for each type of membership are defined on the "
-"website of the association. The amount of donations are free to be decided "
-"by the generous donor."
-msgstr ""
-"Les cotisations minimales pour chacun des types d'adhésions sont fixées sur "
-"le site web de l'association. Le montant des dons est quant à lui laissé à "
-"l'entière appréciation des généreux donateurs."
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:165
-msgid "Politeness"
-msgstr "Civilité"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:173
-msgid "Name"
-msgstr "Nom"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:178
-msgid "First name"
-msgstr "Prénom"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:183
-msgid "Company name"
-msgstr "Raison sociale"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:190
-msgid "Address"
-msgstr "Adresse"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:204
-msgid "Zip Code"
-msgstr "Code postal"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:211
-msgid "City"
-msgstr "Ville"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:217
-msgid "Country"
-msgstr "Pays"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:223
-msgid "Email address"
-msgstr "Courriel"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:229
-msgid "Username"
-msgstr "Identifiant"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:236
-msgid "Amount"
-msgstr "Montant"
-
-#: ../lib/GaletteFullcard/PdfFullcard.php:245
-msgid "Hereby, I agree to comply to %s association statutes and its rules."
-msgstr ""
-"Par la présente, je m'engage à respecter les statuts ainsi que le règlement "
-"intérieur de l'association %s."
-
 #: ../lib/GaletteFullcard/PdfFullcard.php:249
 msgid "At "
 msgstr "Fait à "
@@ -123,17 +35,83 @@ msgstr "Fait à "
 msgid "On            /            /            "
 msgstr "Le            /            /            "
 
-#: ../lib/GaletteFullcard/PdfFullcard.php:252
-msgid "Signature"
-msgstr "Signature"
+#~ msgid "Adhesion form"
+#~ msgstr "Formulaire d'adhésion"
 
-#: ../lib/GaletteFullcard/PdfFullcard.php:257
-msgid "* Only for compagnies"
-msgstr "* Uniquement pour les personnes morales"
+#~ msgid ""
+#~ "Complete the following form and send it with your funds, in order to "
+#~ "complete your subscription."
+#~ msgstr ""
+#~ "Remplissez le formulaire suivant et joignez le lors de l'envoi de votre "
+#~ "règlement, pour compléter votre inscription."
 
-#: ../lib/GaletteFullcard/PdfFullcard.php:258
-msgid "** Galette identifier, if applicable"
-msgstr "** Identifiant Galette, si applicable"
+#~ msgid "Required membership:"
+#~ msgstr "Adhésion souhaitée :"
+
+#~ msgid "Active member"
+#~ msgstr "Membre actif"
+
+#~ msgid "Benefactor member"
+#~ msgstr "Membre bienfaiteur"
+
+#~ msgid "Donation"
+#~ msgstr "Don"
+
+#~ msgid ""
+#~ "The minimum contribution for each type of membership are defined on the "
+#~ "website of the association. The amount of donations are free to be "
+#~ "decided by the generous donor."
+#~ msgstr ""
+#~ "Les cotisations minimales pour chacun des types d'adhésions sont fixées "
+#~ "sur le site web de l'association. Le montant des dons est quant à lui "
+#~ "laissé à l'entière appréciation des généreux donateurs."
+
+#~ msgid "Politeness"
+#~ msgstr "Civilité"
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "First name"
+#~ msgstr "Prénom"
+
+#~ msgid "Company name"
+#~ msgstr "Raison sociale"
+
+#~ msgid "Address"
+#~ msgstr "Adresse"
+
+#~ msgid "Zip Code"
+#~ msgstr "Code postal"
+
+#~ msgid "City"
+#~ msgstr "Ville"
+
+#~ msgid "Country"
+#~ msgstr "Pays"
+
+#~ msgid "Email address"
+#~ msgstr "Courriel"
+
+#~ msgid "Username"
+#~ msgstr "Identifiant"
+
+#~ msgid "Amount"
+#~ msgstr "Montant"
+
+#~ msgid "Hereby, I agree to comply to %s association statutes and its rules."
+#~ msgstr ""
+#~ "Par la présente, je m'engage à respecter les statuts ainsi que le "
+#~ "règlement intérieur de l'association %s."
+
+#~ msgid "Signature"
+#~ msgstr "Signature"
+
+#~ msgid "* Only for compagnies"
+#~ msgstr "* Uniquement pour les personnes morales"
+
+#~ msgid "** Galette identifier, if applicable"
+#~ msgstr "** Identifiant Galette, si applicable"
 
 #~ msgid "Adherent file card"
 #~ msgstr "Fiche adhérent"
