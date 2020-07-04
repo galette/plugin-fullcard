@@ -124,7 +124,6 @@ class PdfFullcard extends PdfAdhesionForm
         $this->SetFont(Pdf::FONT, '', FULLCARD_FONT);
         $this->SetTextColor(0, 0, 0);
 
-        $picture = new Logo();
         $this->PageHeader(_T("Adhesion form"));
 
         $this->SetDrawColor(180, 180, 180);
@@ -171,7 +170,6 @@ class PdfFullcard extends PdfAdhesionForm
         $this->Ln(20);
 
         $this->SetFont(Pdf::FONT, '', FULLCARD_FONT + 2);
-        $y = $this->GetY() + 1;
         $this->Cell(30, 7, _T("Politeness"), 0, 0, 'L');
         $title = '';
         if ($member !== null && $member->title) {
