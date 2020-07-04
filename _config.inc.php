@@ -36,4 +36,3 @@
  */
 
 define('FULLCARD_SMARTY_PREFIX', 'plugins_fullcard');
-?>

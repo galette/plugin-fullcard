@@ -2,10 +2,6 @@
 
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
-use GaletteFullcard\PdfFullcard;
-use Galette\Entity\Adherent;
-use Analog\Analog;
-
 /**
  * Fullcard routes
  *
@@ -38,6 +34,10 @@ use Analog\Analog;
  * @link      http://galette.tuxfamily.org
  * @since     0.9dev 2016-03-02
  */
+
+use GaletteFullcard\PdfFullcard;
+use Galette\Entity\Adherent;
+use Analog\Analog;
 
 //Constants and classes from plugin
 require_once $module['root'] . '/_config.inc.php';
