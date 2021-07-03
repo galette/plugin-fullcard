@@ -120,11 +120,10 @@ class PdfFullcard extends PdfAdhesionForm
     {
         $member = $this->adh;
 
-        define('FULLCARD_FONT', Pdf::FONT_SIZE-2);
+        define('FULLCARD_FONT', Pdf::FONT_SIZE - 2);
         $this->SetFont(Pdf::FONT, '', FULLCARD_FONT);
         $this->SetTextColor(0, 0, 0);
 
-        $picture = new Logo();
         $this->PageHeader(_T("Adhesion form"));
 
         $this->SetDrawColor(180, 180, 180);
@@ -148,22 +147,22 @@ class PdfFullcard extends PdfAdhesionForm
         $this->SetFont(Pdf::FONT, '', FULLCARD_FONT + 2);
 
         //let's draw all fields
-        $y = $this->GetY()+1;
+        $y = $this->GetY() + 1;
         $this->Write(5, _T("Required membership:"));
-        $this->SetX($this->GetX()+5);
+        $this->SetX($this->GetX() + 5);
         $this->Rect($this->GetX(), $y, 3, 3);
-        $this->SetX($this->GetX()+(($member === null)?3:0));
+        $this->SetX($this->GetX() + (($member === null) ? 3 : 0));
         $this->Cell(3, 5, ($member !== null && $member->status == 4) ? "X" : "", 0, 0, 'C');
 
         $this->Write(5, _T("Active member"));
-        $this->SetX($this->GetX()+5);
+        $this->SetX($this->GetX() + 5);
         $this->Rect($this->GetX(), $y, 3, 3);
-        $this->SetX($this->GetX()+(($member === null)?3:0));
+        $this->SetX($this->GetX() + (($member === null) ? 3 : 0));
         $this->Cell(3, 5, ($member !== null && $member->status == 5) ? "X" : "", 0, 0, 'C');
         $this->Write(5, _T("Benefactor member"));
-        $this->SetX($this->GetX()+5);
+        $this->SetX($this->GetX() + 5);
         $this->Rect($this->GetX(), $y, 3, 3);
-        $this->SetX($this->GetX()+3);
+        $this->SetX($this->GetX() + 3);
         $this->Write(5, _T("Donation"));
         $this->Ln();
         $this->SetFont(Pdf::FONT, '', FULLCARD_FONT);
@@ -171,80 +170,79 @@ class PdfFullcard extends PdfAdhesionForm
         $this->Ln(20);
 
         $this->SetFont(Pdf::FONT, '', FULLCARD_FONT + 2);
-        $y = $this->GetY()+1;
         $this->Cell(30, 7, _T("Politeness"), 0, 0, 'L');
         $title = '';
         if ($member !== null && $member->title) {
             $title = $member->title->long;
         }
         $this->Cell(0, 7, $title, 0, 1, 'L');
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
-        $this->Cell(30, 7, _T("Name"), 0, (($member === null)?1:0), 'L');
+        $this->Cell(30, 7, _T("Name"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->name, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
-        $this->Cell(30, 7, _T("First name"), 0, (($member === null)?1:0), 'L');
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
+        $this->Cell(30, 7, _T("First name"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->surname, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
-        $this->Cell(30, 7, _T("Company name") . " *", 0, (($member === null)?1:0), 'L');
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
+        $this->Cell(30, 7, _T("Company name") . " *", 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->company_name, 0, 1, 'L');
         }
 
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
-        $this->Cell(30, 7, _T("Address"), 0, (($member === null)?1:0), 'L');
+        $this->Cell(30, 7, _T("Address"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->address, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
         $this->SetY($this->GetY() + 7);
         if ($member !== null) {
             $this->Cell(0, 7, $member->address_continuation, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
         $this->SetY($this->GetY() + 7);
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
         $y = $this->GetY();
-        $this->Cell(30, 7, _T("Zip Code"), 0, (($member === null)?1:0), 'L');
+        $this->Cell(30, 7, _T("Zip Code"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->zipcode, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30, $this->GetY()-1, $this->GetX()+30+15, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, $this->GetX() + 30 + 15, $this->GetY() - 1);
         $this->SetY($y);
-        $this->SetX($this->GetX()+30+15+5);
-        $this->Cell(30, 7, _T("City"), 0, (($member === null)?1:0), 'L');
+        $this->SetX($this->GetX() + 30 + 15 + 5);
+        $this->Cell(30, 7, _T("City"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->town, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30+15+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30 + 15 + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
-        $this->Cell(30, 7, _T("Country"), 0, (($member === null)?1:0), 'L');
+        $this->Cell(30, 7, _T("Country"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->country, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
-        $this->Cell(30, 7, _T("Email address"), 0, (($member === null)?1:0), 'L');
+        $this->Cell(30, 7, _T("Email address"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->email, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
-        $this->Cell(30, 7, _T("Username") ." **", 0, (($member === null)?1:0), 'L');
+        $this->Cell(30, 7, _T("Username") . " **", 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
             $this->Cell(0, 7, $member->login, 0, 1, 'L');
         }
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
         $this->Ln(6);
         $this->Cell(30, 7, _T("Amount"), 0, 1, 'L');
-        $this->Line($this->GetX()+30, $this->GetY()-1, 190, $this->GetY()-1);
+        $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
         $this->Ln(10);
         $this->Write(
