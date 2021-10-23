@@ -7,7 +7,7 @@
  *
  * PHP version 5
  *
- * Copyright © 2011-2014 The Galette Team
+ * Copyright © 2011-2021 The Galette Team
  *
  * This file is part of Galette (http://galette.tuxfamily.org).
  *
@@ -28,7 +28,7 @@
  * @package   GaletteFullcard
  *
  * @author    Johan Cwiklinski <johan@x-tnd.be>
- * @copyright 2011-2014 The Galette Team
+ * @copyright 2011-2021 The Galette Team
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @version   SVN: $Id$
  * @link      http://galette.tuxfamily.org
@@ -39,9 +39,9 @@ $this->register(
     'Galette Fullcard',         //Name
     'Full member card as PDF',  //Short description
     'Johan Cwiklinski',         //Author
-    '1.8.0',                    //Version
+    '1.8.1',                    //Version
     '0.9.5',                    //Galette compatible version
     'fullcard',                 //routing name
-    '2021-07-03',               //Release date
+    '2021-10-23',               //Release date
     []                          //Permissions needed
 );
