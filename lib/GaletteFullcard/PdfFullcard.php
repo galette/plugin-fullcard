@@ -7,7 +7,7 @@
  *
  * PHP version 5
  *
- * Copyright © 2016 The Galette Team
+ * Copyright © 2016-2022 The Galette Team
  *
  * This file is part of Galette (http://galette.tuxfamily.org).
  *
@@ -28,7 +28,7 @@
  * @package   GaletteFullcard
  *
  * @author    Johan Cwiklinski <johan@x-tnd.be>
- * @copyright 2016 The Galette Team
+ * @copyright 2016-2022 The Galette Team
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @version   SVN: $Id$
  * @link      http://galette.tuxfamily.org
@@ -53,7 +53,7 @@ use Analog\Analog;
  * @package   Galette
  * @abstract  Class for expanding TCPDF.
  * @author    Johan Cwiklinski <johan@x-tnd.be>
- * @copyright 2016 The Galette Team
+ * @copyright 2016-2022 The Galette Team
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      http://galette.tuxfamily.org
  * @since     Available since 0.9dev - 2016-03-02
@@ -180,17 +180,17 @@ class PdfFullcard extends PdfAdhesionForm
 
         $this->Cell(30, 7, _T("Name"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
-            $this->Cell(0, 7, $member->name, 0, 1, 'L');
+            $this->Cell(0, 7, $member->name ?? '', 0, 1, 'L');
         }
         $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
         $this->Cell(30, 7, _T("First name"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
-            $this->Cell(0, 7, $member->surname, 0, 1, 'L');
+            $this->Cell(0, 7, $member->surname ?? '', 0, 1, 'L');
         }
         $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
         $this->Cell(30, 7, _T("Company name") . " *", 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
-            $this->Cell(0, 7, $member->company_name, 0, 1, 'L');
+            $this->Cell(0, 7, $member->company_name ?? '', 0, 1, 'L');
         }
 
         $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
@@ -202,7 +202,7 @@ class PdfFullcard extends PdfAdhesionForm
         $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
         $this->SetY($this->GetY() + 7);
         if ($member !== null) {
-            $this->Cell(0, 7, $member->address_continuation, 0, 1, 'L');
+            $this->Cell(0, 7, $member->address_continuation ?? '', 0, 1, 'L');
         }
         $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
         $this->SetY($this->GetY() + 7);
@@ -211,32 +211,32 @@ class PdfFullcard extends PdfAdhesionForm
         $y = $this->GetY();
         $this->Cell(30, 7, _T("Zip Code"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
-            $this->Cell(0, 7, $member->zipcode, 0, 1, 'L');
+            $this->Cell(0, 7, $member->getZipcode(), 0, 1, 'L');
         }
         $this->Line($this->GetX() + 30, $this->GetY() - 1, $this->GetX() + 30 + 15, $this->GetY() - 1);
         $this->SetY($y);
         $this->SetX($this->GetX() + 30 + 15 + 5);
         $this->Cell(30, 7, _T("City"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
-            $this->Cell(0, 7, $member->town, 0, 1, 'L');
+            $this->Cell(0, 7, $member->getTown(), 0, 1, 'L');
         }
         $this->Line($this->GetX() + 30 + 15 + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
         $this->Cell(30, 7, _T("Country"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
-            $this->Cell(0, 7, $member->country, 0, 1, 'L');
+            $this->Cell(0, 7, $member->getCountry(), 0, 1, 'L');
         }
         $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
         $this->Cell(30, 7, _T("Email address"), 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
-            $this->Cell(0, 7, $member->email, 0, 1, 'L');
+            $this->Cell(0, 7, $member->getEmail(), 0, 1, 'L');
         }
         $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
         $this->Cell(30, 7, _T("Username") . " **", 0, (($member === null) ? 1 : 0), 'L');
         if ($member !== null) {
-            $this->Cell(0, 7, $member->login, 0, 1, 'L');
+            $this->Cell(0, 7, $member->login ?? '', 0, 1, 'L');
         }
         $this->Line($this->GetX() + 30, $this->GetY() - 1, 190, $this->GetY() - 1);
 
