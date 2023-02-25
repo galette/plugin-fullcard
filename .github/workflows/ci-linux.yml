@@ -70,3 +70,9 @@ jobs:
           cd galette-core/galette/plugins/plugin-fullcard
           composer require maglnet/composer-require-checker -W
           vendor/bin/composer-require-checker check --config-file=.composer-require-checker.config.json ../../composer.json
+
+      - name: PHPStan checks
+        run: |
+          cd galette-core/galette/plugins/plugin-fullcard
+          ../../vendor/bin/phpstan analyze --ansi --memory-limit=2G --no-interaction --no-progress
+        if: matrix.php-versions == '8.1'

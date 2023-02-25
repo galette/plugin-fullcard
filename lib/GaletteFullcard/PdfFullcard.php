@@ -7,7 +7,7 @@
  *
  * PHP version 5
  *
- * Copyright © 2016-2022 The Galette Team
+ * Copyright © 2016-2023 The Galette Team
  *
  * This file is part of Galette (http://galette.tuxfamily.org).
  *
@@ -28,7 +28,7 @@
  * @package   GaletteFullcard
  *
  * @author    Johan Cwiklinski <johan@x-tnd.be>
- * @copyright 2016-2022 The Galette Team
+ * @copyright 2016-2023 The Galette Team
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @version   SVN: $Id$
  * @link      http://galette.tuxfamily.org
@@ -39,11 +39,9 @@ namespace GaletteFullcard;
 
 use Galette\IO\PdfAdhesionForm;
 use Galette\Core\Preferences;
-use Galette\Core\Logo;
 use Galette\Core\Db;
 use Galette\Entity\Adherent;
 use Galette\IO\Pdf;
-use Analog\Analog;
 
 /**
  * Member full card PDF
@@ -53,7 +51,7 @@ use Analog\Analog;
  * @package   Galette
  * @abstract  Class for expanding TCPDF.
  * @author    Johan Cwiklinski <johan@x-tnd.be>
- * @copyright 2016-2022 The Galette Team
+ * @copyright 2016-2023 The Galette Team
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      http://galette.tuxfamily.org
  * @since     Available since 0.9dev - 2016-03-02
@@ -73,8 +71,7 @@ class PdfFullcard extends PdfAdhesionForm
         $this->adh = $adh;
         $this->prefs = $prefs;
         $this->filename = _T('fullcard', 'fullcard') . '.pdf';
-        $this->core = false;
-        parent::__construct($adh, $zdb, $prefs, false);
+        parent::__construct($adh, $zdb, $prefs);
         $this->init();
         $this->drawCard();
     }
@@ -82,9 +79,9 @@ class PdfFullcard extends PdfAdhesionForm
     /**
      * Get model
      *
-     * @return PdfModel
+     * @return null
      */
-    protected function getModel()
+    protected function getModel() //@phpstan-ignore-line
     {
         //override default PdfAdhesionForm model
         return null;
