@@ -76,3 +76,8 @@ jobs:
           cd galette-core/galette/plugins/plugin-fullcard
           ../../vendor/bin/phpstan analyze --ansi --memory-limit=2G --no-interaction --no-progress
         if: matrix.php-versions == '8.1'
+
+      - name: Headers checks
+        run: |
+          cd galette-core/galette/plugins/plugin-fullcard
+          ../../vendor/bin/docheader --docheader=../../../.docheader check lib ./*.php
