@@ -39,7 +39,7 @@ $this->register(
     'Full member card as PDF',  //Short description
     'Johan Cwiklinski',         //Author
     '2.0.0',                    //Version
-    '1.0.0',                    //Galette compatible version
+    '1.1.0',                    //Galette compatible version
     'fullcard',                 //routing name
     '2023-12-07',               //Release date
     []                          //Permissions needed

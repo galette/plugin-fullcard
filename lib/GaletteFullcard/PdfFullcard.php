@@ -37,6 +37,7 @@
 
 namespace GaletteFullcard;
 
+use Galette\Entity\PdfModel;
 use Galette\IO\PdfAdhesionForm;
 use Galette\Core\Preferences;
 use Galette\Core\Db;
@@ -62,7 +63,7 @@ class PdfFullcard extends PdfAdhesionForm
     /**
      * Main constructor
      *
-     * @param Adherent    $adh   Adherent
+     * @param ?Adherent   $adh   Adherent
      * @param Db          $zdb   Database instance
      * @param Preferences $prefs Preferences instance
      */
@@ -79,9 +80,9 @@ class PdfFullcard extends PdfAdhesionForm
     /**
      * Get model
      *
-     * @return null
+     * @return ?PdfModel
      */
-    protected function getModel() //@phpstan-ignore-line
+    protected function getModel(): ?PdfModel
     {
         //override default PdfAdhesionForm model
         return null;
@@ -92,7 +93,7 @@ class PdfFullcard extends PdfAdhesionForm
      *
      * @return void
      */
-    private function init()
+    private function init(): void
     {
         // Set document information
         $this->SetTitle(_T('Member\'s full card', 'fullcard'));
@@ -113,7 +114,7 @@ class PdfFullcard extends PdfAdhesionForm
      *
      * @return void
      */
-    private function drawCard()
+    private function drawCard(): void
     {
         $member = $this->adh;
 
