@@ -69,7 +69,7 @@ class PdfFullcard extends PdfAdhesionForm
      *
      * @return void
      */
-    private function init(): void
+    public function init(): void
     {
         // Set document information
         $this->SetTitle(_T('Member\'s full card', 'fullcard'));
