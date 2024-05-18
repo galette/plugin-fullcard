@@ -19,6 +19,8 @@
  * along with Galette. If not, see <http://www.gnu.org/licenses/>.
  */
 
+declare(strict_types=1);
+
 use GaletteFullcard\PdfFullcard;
 use Galette\Entity\Adherent;
 use Analog\Analog;

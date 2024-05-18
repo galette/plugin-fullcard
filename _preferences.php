@@ -19,6 +19,8 @@
  * along with Galette. If not, see <http://www.gnu.org/licenses/>.
  */
 
+declare(strict_types=1);
+
 $_preferences = array(
     'pref_adhesion_form' => '\GaletteFullcard\PdfFullcard'
 );
