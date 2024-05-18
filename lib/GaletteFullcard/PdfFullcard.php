@@ -51,7 +51,6 @@ class PdfFullcard extends PdfAdhesionForm
         $this->prefs = $prefs;
         $this->filename = _T('fullcard', 'fullcard') . '.pdf';
         parent::__construct($adh, $zdb, $prefs);
-        $this->init();
         $this->drawCard();
     }
 
@@ -85,6 +84,7 @@ class PdfFullcard extends PdfAdhesionForm
 
         // Disable Auto Page breaks
         $this->SetAutoPageBreak(false, 20);
+        parent::init();
     }
 
     /**
