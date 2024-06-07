@@ -8,19 +8,26 @@ on:
       - 'feature/*'
       - 'hotfix/*'
       - 'release/*'
+    tags:
+      - '*'
   pull_request:
+  # Enable manual run
+  workflow_dispatch:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
 
 jobs:
-  ubuntu-latest:
+  lint:
     runs-on: ubuntu-latest
+    name: "Lint on PHP ${{ matrix.php-versions }}"
 
     strategy:
       matrix:
-        php-versions: [ '8.1', '8.2' ]
+        php-versions: [ '8.1', '8.3' ]
         coverage: [none]
       fail-fast: false
-
-    name: PHP ${{ matrix.php-versions }} on ubuntu-latest
 
     steps:
       - name: PHP
@@ -31,7 +38,7 @@ jobs:
           coverage: ${{ matrix.coverage }}
 
       - name: Checkout Galette core
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: galette/galette
           path: galette-core
@@ -39,7 +46,7 @@ jobs:
           ref: develop
 
       - name: Checkout plugin
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: galette-core/galette/plugins/plugin-fullcard
 
@@ -49,7 +56,7 @@ jobs:
           echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: Cache dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
@@ -70,12 +77,12 @@ jobs:
           cd galette-core/galette/plugins/plugin-fullcard
           composer require maglnet/composer-require-checker -W
           vendor/bin/composer-require-checker check --config-file=.composer-require-checker.config.json ../../composer.json
+        if: matrix.php-versions == '8.3'
 
       - name: PHPStan checks
         run: |
           cd galette-core/galette/plugins/plugin-fullcard
           ../../vendor/bin/phpstan analyze --ansi --memory-limit=2G --no-interaction --no-progress
-        if: matrix.php-versions == '8.1'
 
       - name: Headers checks
         run: |
