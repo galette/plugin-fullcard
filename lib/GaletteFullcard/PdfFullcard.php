@@ -1,15 +1,9 @@
 <?php
 
-/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
-
 /**
- * Member full card PDF
+ * Copyright © 2003-2024 The Galette Team
  *
- * PHP version 5
- *
- * Copyright © 2016-2023 The Galette Team
- *
- * This file is part of Galette (http://galette.tuxfamily.org).
+ * This file is part of Galette (https://galette.eu).
  *
  * Galette is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,20 +17,13 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with Galette. If not, see <http://www.gnu.org/licenses/>.
- *
- * @category  IO
- * @package   GaletteFullcard
- *
- * @author    Johan Cwiklinski <johan@x-tnd.be>
- * @copyright 2016-2023 The Galette Team
- * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
- * @version   SVN: $Id$
- * @link      http://galette.tuxfamily.org
- * @since     Available since 0.9dev - 2016-03-02
  */
+
+declare(strict_types=1);
 
 namespace GaletteFullcard;
 
+use Galette\Entity\PdfModel;
 use Galette\IO\PdfAdhesionForm;
 use Galette\Core\Preferences;
 use Galette\Core\Db;
@@ -46,15 +33,7 @@ use Galette\IO\Pdf;
 /**
  * Member full card PDF
  *
- * @category  IO
- * @name      PDF
- * @package   Galette
- * @abstract  Class for expanding TCPDF.
- * @author    Johan Cwiklinski <johan@x-tnd.be>
- * @copyright 2016-2023 The Galette Team
- * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
- * @link      http://galette.tuxfamily.org
- * @since     Available since 0.9dev - 2016-03-02
+ * @author Johan Cwiklinski <johan@x-tnd.be>
  */
 
 class PdfFullcard extends PdfAdhesionForm
@@ -62,7 +41,7 @@ class PdfFullcard extends PdfAdhesionForm
     /**
      * Main constructor
      *
-     * @param Adherent    $adh   Adherent
+     * @param ?Adherent   $adh   Adherent
      * @param Db          $zdb   Database instance
      * @param Preferences $prefs Preferences instance
      */
@@ -72,16 +51,15 @@ class PdfFullcard extends PdfAdhesionForm
         $this->prefs = $prefs;
         $this->filename = _T('fullcard', 'fullcard') . '.pdf';
         parent::__construct($adh, $zdb, $prefs);
-        $this->init();
         $this->drawCard();
     }
 
     /**
      * Get model
      *
-     * @return null
+     * @return ?PdfModel
      */
-    protected function getModel() //@phpstan-ignore-line
+    protected function getModel(): ?PdfModel
     {
         //override default PdfAdhesionForm model
         return null;
@@ -92,7 +70,7 @@ class PdfFullcard extends PdfAdhesionForm
      *
      * @return void
      */
-    private function init()
+    public function init(): void
     {
         // Set document information
         $this->SetTitle(_T('Member\'s full card', 'fullcard'));
@@ -106,6 +84,7 @@ class PdfFullcard extends PdfAdhesionForm
 
         // Disable Auto Page breaks
         $this->SetAutoPageBreak(false, 20);
+        parent::init();
     }
 
     /**
@@ -113,7 +92,7 @@ class PdfFullcard extends PdfAdhesionForm
      *
      * @return void
      */
-    private function drawCard()
+    private function drawCard(): void
     {
         $member = $this->adh;
 
